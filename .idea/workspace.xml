@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8f40ab6e-c4d4-4f2b-a235-edbae421a1ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/puddle/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/templates/core/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/templates/core/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/templates/core/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/templates/core/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/core/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/migrations/0002_alter_category_options_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/migrations/0003_rename_price_item_salary_remove_item_is_sold.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/templates/item/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/item/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/Screenshot_2023-05-20_at_20.07.40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/What-Is-A-Full-Stack-Developer-and-Everything-You-Need-to-Know-to-Start.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/What-Is-A-Full-Stack-Developer-and-Everything-You-Need-to-Know-to-Start_8HGWLc4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/What-Is-A-Full-Stack-Developer-and-Everything-You-Need-to-Know-to-Start_Sigp1xU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/shoe-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/teddy-bear.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/toy-car.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/puddle/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/puddle/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/puddle/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/puddle/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/puddle/puddle/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CodeForHire.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CodeForHire.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/media/AdobeStock_386358050_Preview.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/media/AdobeStock_490333979_Preview.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/media/AdobeStock_571280209_Preview.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/media/AdobeStock_580258698_Preview.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/media/AdobeStock_593334980_Preview.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/CodeForHire/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/templates/core/FullStack.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/templates/core/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/templates/core/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/templates/core/javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/templates/core/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/core/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeForHire/manage.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QCmJSmIbRVTQixQen4sKxuJ2uL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f40ab6e-c4d4-4f2b-a235-edbae421a1ff" name="Changes" comment="" />
+      <created>1684865867153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684865867153</updated>
+      <workItem from="1684865870302" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
