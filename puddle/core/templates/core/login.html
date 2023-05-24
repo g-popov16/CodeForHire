@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Log in{% endblock title %}
+
+
+{% block content %}
+
+<div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+    <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+        <h1 class="text-3xl font-bold mb-6">Sign Up</h1>
+
+        <form method="post" action=".">
+            {% csrf_token %}
+
+            <div class="block border border-grey-light w-full p-3 rounded mb-4">
+                <label  class="text-lg">Username</label><br>
+                {{ form.username }}
+            </div>
+
+            <div class="block border border-grey-light w-full p-3 rounded mb-4">
+                <label class="text-lg">Password</label><br>
+                {{ form.password }}
+            </div>
+
+
+
+            {% if form.errors or form.non_field_errors %}
+                <div class="error-container bg-red-100 text-red-600 py-2 px-4 rounded mb-4">
+                    {% for field in form %}
+                        {{ field.errors }}
+                    {% endfor %}
+
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+
+            <button class="signup-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded, w-full">
+                Log in
+            </button>
+
+
+
+
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
