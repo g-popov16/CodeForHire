@@ -21,7 +21,16 @@
 
         {% endif %}
 
-        <a href="#" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Firm</a>
+        {% if request.user == item.created_by %}
+            <div>
+                <p>This is your item!</p>
+                <a href="{% url 'item:edit' item.id %}">Edit</a>
+                <a href="{% url 'item:delete' item.id%}">Delete</a>
+            </div>
+
+        {% else %}
+            <a href="#" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Firm</a>
+        {% endif %}
     </div>
 </div>
 
@@ -41,6 +50,7 @@
                             <h2 class="text-2xl">{{ item.name }}</h2>
                             <p class="text-gray-500">Salary: {{ item.salary }}</p>
                         </div>
+
                     </a>
                 </div>
             {% endfor %}
