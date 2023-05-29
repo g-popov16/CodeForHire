@@ -3,20 +3,20 @@
 {% block title %}Conversation{% endblock title %}
 
 {% block content %}
-<h1>Conversation</h1>
+<h1 class="font-bold text-xl">Conversation</h1>
 
 <div>
     {% for message in  conversation.messages.all %}
-            <div class="pr-6 flex {% if message.created_by == request.user %}bg-blue-100 {% else %} bg-gray-100 {% endif %}rounded-xl ">
+            <div class="pr-6 flex {% if message.created_by == request.user %}bg-blue-100 {% else %} bg-gray-100 {% endif %}rounded-xl mt-4 py-2 px-2">
                 <div>
-                    <p><strong>{{ message.created_by.username }}</strong> @ {{ message.created_at}}</p>
-                    <p>{{ message.content }}</p>
+                    <p class="font-bold"><strong>{{ message.created_by.username }}</strong> @ {{ message.created_at}}</p>
+                    <p >{{ message.content }}</p>
                 </div>
             </div>
     {% endfor %}
 </div>
 
-<form method="post" action='.'>
+<form method="post" action='.' class="font-bold text-lg">
     {% csrf_token %}
 
     {{form.as_p}}
