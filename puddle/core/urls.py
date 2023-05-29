@@ -2,9 +2,11 @@ from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
 from .forms import LoginForm
+from django.conf.urls import handler404
 
 
 app_name = 'core'
+
 
 urlpatterns = [
     path('', views.index, name='index'),
