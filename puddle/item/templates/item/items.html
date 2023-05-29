@@ -7,10 +7,35 @@
     <div class="pb-6 grid grid-cols-4 gap-4, bg-gray-100">
         <div class="col-span-1">
             <form method="get" action="{% url 'item:items' %}">
-                <input name="query" type="text" value="{{ query }" placeholder="Find the perfect listing for you!">
+                <input  class='w-full py-4 px-6' name="query" type="text" value="{{ query }}" placeholder="Find the perfect listing for you!">
+
 
                 <button>Search</button>
             </form>
+
+            <hr class="my-6">
+
+            <p class='font-semibold'>Categories</p>
+
+            <ul>
+                {% for category in categories %}
+                    <li class="s{% if category.id == category_id %} bg-gray-200 {% endif %}">
+                        <a href="{% url 'item:items' %}?query={{ query }}&category={{category.id}}">{{category.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <hr class="my-6">
+
+            <p class='font-semibold'>Clear filters</p>
+
+            <ul>
+                    <li>
+                        <a href="{% url 'item:items' %}">Clear</a>
+                    </li>
+            </ul>
+
+
         </div>
 
         <div class="col-span-3">

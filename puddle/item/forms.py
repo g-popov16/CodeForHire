@@ -11,6 +11,7 @@ class NewItemForm(forms.ModelForm):
         widgets = {
             'category': forms.Select(attrs={
                 'class': INPUT_CLASSES
+
             }),
 
             'name': forms.TextInput(attrs={
