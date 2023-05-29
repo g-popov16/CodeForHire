@@ -10,8 +10,8 @@
 
     <div class='col-span-2 p-6 bg-gray-1000 rounded-xl'>
         <h1 class="mb-6 text-3xl">{{ item.name }}</h1>
-        <p class="text-gray-500"><strong>Salary:</strong> {{ item.salary}}</p>
-        <p class="text-gray-500"><strong>Firm:</strong> {{ item.created_by.username}}</p>
+        <p class="mb-4 text-gray-500"><strong>Salary:</strong> {{ item.salary}}</p>
+        <p class="mb-4 text-gray-500"><strong>Firm:</strong> {{ item.created_by.username}}</p>
 
         {% if item.description %}
         <p class="text-gray-700">
@@ -23,14 +23,15 @@
 
         {% if request.user == item.created_by %}
             <div>
-                <p>This is your item!</p>
-                <a href="{% url 'item:edit' item.id %}">Edit</a>
-                <a href="{% url 'item:delete' item.id%}">Delete</a>
+                <p class="text-lg font-bold text-gray-700 mb-4" >This is your item!</p>
+                <a href="{% url 'item:edit' item.id %}" class='px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700'>Edit</a>
+                <a href="{% url 'item:delete' item.id%}" class='px-6 py-3 text-lg font-semibold bg-red-500 text-white rounded-xl hover:bg-red-700'>Delete</a>
             </div>
 
         {% elif request.user.is_superuser%}
-            <a href="{% url 'item:edit' item.id %}">Edit</a>
-            <a href="{% url 'item:delete' item.id%}">Delete</a>
+            <a href="{% url 'item:edit' item.id %}" class='px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700'>Edit</a>
+            <a href="{% url 'item:delete' item.id%}" class='px-6 py-3 text-lg font-semibold bg-red-500 text-white rounded-xl hover:bg-red-700'
+>Delete</a>
             <a href="{% url 'conversation:new' item.id%}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Firm</a>
         {% else %}
             <a href="{% url 'conversation:new' item.id%}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Firm</a>
@@ -48,7 +49,7 @@
                         <div>
                             <img src="{{ item.image.url }}" class="rounded-t-xl">
                         </div>
-                    
+
 
                         <div class="p-6 bg-white rounded-b-xl">
                             <h2 class="text-2xl">{{ item.name }}</h2>
