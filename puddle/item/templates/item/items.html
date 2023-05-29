@@ -7,10 +7,10 @@
     <div class="pb-6 grid grid-cols-4 gap-4, bg-gray-100">
         <div class="col-span-1">
             <form method="get" action="{% url 'item:items' %}">
-                <input  class='w-full py-4 px-6' name="query" type="text" value="{{ query }}" placeholder="Find the perfect listing for you!">
+                <input  class='w-full py-4 px-6 mb-6 border border-gray-500 rounded-lg p-2 mt-2' name="query" type="text" value="{{ query }}" placeholder="Find the perfect listing for you!">
 
 
-                <button>Search</button>
+                <button class="signup-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl ">Search</button>
             </form>
 
             <hr class="my-6">
@@ -19,19 +19,19 @@
 
             <ul>
                 {% for category in categories %}
-                    <li class="s{% if category.id == category_id %} bg-gray-200 {% endif %}">
-                        <a href="{% url 'item:items' %}?query={{ query }}&category={{category.id}}">{{category.name}}</a>
+                    <li class="py-2 px-4  s{% if category.id == category_id %} bg-gray-200 {% endif %}">
+                        <a href="{% url 'item:items' %}?query={{ query }}&category={{category.id}}" class="text-blue-500 hover:underline">{{category.name}}</a>
                     </li>
                 {% endfor %}
             </ul>
 
             <hr class="my-6">
 
-            <p class='font-semibold'>Clear filters</p>
+            <p class='font-semibold '>Clear filters</p>
 
             <ul>
-                    <li>
-                        <a href="{% url 'item:items' %}">Clear</a>
+                    <li class="py-2 px-4  s{% if category.id == category_id %} bg-gray-200 {% endif %}">
+                        <a href="{% url 'item:items' %}" class="font-bold text-blue-500 hover:underline">Clear</a>
                     </li>
             </ul>
 
@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-span-3">
-            <div class="grid grid-cols-3 gap-3">
+            <div class="grid grid-cols-3 gap-3 ">
                 {% for item in  items %}
                     <div>
                         <a href="{% url 'item:detail' item.id %}">
