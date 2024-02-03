@@ -19,6 +19,15 @@ class SignupForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2')
 
+    description = forms.CharField(widget=forms.Textarea(attrs={
+        'placeholder': 'Tell us something about yourself...',
+        'class': 'w-full py-4 px-6 rounded-xl',
+        'rows': 5,  # Example row number for a textarea
+    }))
+    profile_picture = forms.ImageField(required=False, widget=forms.FileInput(attrs={
+        'class': 'w-full py-4 px-6',
+    }))
+
     username = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Your username',
         'class': 'w-full py-4 px-6 rounded-xl'

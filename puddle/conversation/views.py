@@ -1,43 +1,50 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from item.models import Item
 from .models import Conversation
 from .forms import ConversationMessageForm
 
+from django.db.models import Q
+
+
 @login_required
 def new_conversation(request, item_pk):
     item = get_object_or_404(Item, pk=item_pk)
 
-    if item.created_by == request.user:
-        return redirect('dashboard:index')
-    
-    conversations = Conversation.objects.filter(item=item).filter(members__in=[request.user.id])
-
-    if conversations:
-        return redirect('conversation:detail', pk=conversations.first().id)
     if request.method == 'POST':
-        form = ConversationMessageForm(request.POST)
+        selected_members = request.POST.getlist('members')
 
-        if form.is_valid():
-            conversation = Conversation.objects.create(item=item)
-            conversation.members.add(request.user)
-            conversation.members.add(item.created_by)
-            conversation.save()
+        # Ensure current user is part of the conversation
+        if request.user.id not in map(int, selected_members):
+            selected_members.append(request.user.id)
 
-            conversation_message = form.save(commit=False)
-            conversation_message.conversation = conversation
-            conversation_message.created_by = request.user
-            conversation_message.save()
+        # Sort the member IDs for consistent comparison
+        selected_member_ids = sorted(map(int, selected_members))
 
-            return redirect("item:detail", pk=item_pk)
-        
+        # Find an existing conversation with the exact same members
+        existing_conversation = None
+        for conversation in Conversation.objects.filter(item=item):
+            member_ids = sorted(member.id for member in conversation.members.all())
+            if member_ids == selected_member_ids:
+                existing_conversation = conversation
+                break
+
+        # Redirect to the existing conversation if found
+        if existing_conversation:
+            return redirect('conversation:detail', pk=existing_conversation.pk)
+
+        # Create a new conversation if none exists
+        conversation = Conversation.objects.create(item=item)
+        conversation.members.set(User.objects.filter(id__in=selected_members))
+        conversation.save()
+
+        return redirect('conversation:detail', pk=conversation.pk)
+
     else:
-        form = ConversationMessageForm()
+        users = User.objects.all()
+        return render(request, 'conversation/select_members.html', {'users': users})
 
-    return render(request, 'conversation/new.html', 
-                  {
-                      'form': form}
-                      )
 
 @login_required
 def inbox(request):
@@ -50,7 +57,7 @@ def inbox(request):
 @login_required
 
 def detail(request, pk):
-    conversation = Conversation.objects.filter(members__in=[request.user.id]).get(pk=pk)
+    conversation = get_object_or_404(Conversation, pk=pk)
 
     if request.method == 'POST':
         form = ConversationMessageForm(request.POST)

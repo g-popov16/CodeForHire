@@ -1,6 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from item.models import Item, Category
+from item.models import Item
+from item.models import Category
+
+# The rest of your view functions...
+
+
+# rest of your view functions...
 from .forms import SignupForm
 from django.contrib.auth import logout
 
