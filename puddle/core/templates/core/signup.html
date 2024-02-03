@@ -2,68 +2,61 @@
 
 {% block title %}Sign Up{% endblock title %}
 
-
 {% block content %}
-
 <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
     <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-        <h1 class="text-3xl font-bold mb-6">Sign Up</h1>
+        <h1 class="mb-8 text-3xl text-center font-bold">Sign Up</h1>
 
-        <form method="post" action=".">
+        <form method="post" action="." enctype="multipart/form-data">
             {% csrf_token %}
-
-            <div class="block border border-grey-light w-full p-3 rounded mb-4">
-                <label for="id_username" class="text-lg">Username</label><br>
+            <!-- Username Field -->
+            <div class="mb-4">
+                <label for="id_username" class="block text-grey-darker text-sm font-bold mb-2">Username</label>
                 {{ form.username }}
             </div>
 
-            <div class="block border border-grey-light w-full p-3 rounded mb-4">
-                <label for="id_email" class="text-lg">Email</label><br>
+            <!-- Email Field -->
+            <div class="mb-4">
+                <label for="id_email" class="block text-grey-darker text-sm font-bold mb-2">Email</label>
                 {{ form.email }}
             </div>
 
-            <div class="block border border-grey-light w-full p-3 rounded mb-4">
-                <label for="id_password1" class="text-lg">Password</label><br>
+            <!-- Password Fields -->
+            <div class="mb-4">
+                <label for="id_password1" class="block text-grey-darker text-sm font-bold mb-2">Password</label>
                 {{ form.password1 }}
             </div>
-
-            <div class="block border border-grey-light w-full p-3 rounded mb-4">
-                <label for="id_password2" class="text-lg">Repeat Password</label><br>
+            <div class="mb-4">
+                <label for="id_password2" class="block text-grey-darker text-sm font-bold mb-2">Repeat Password</label>
                 {{ form.password2 }}
             </div>
 
-            {% if form.errors or form.non_field_errors %}
-                <div class="error-container bg-red-100 text-red-600 py-2 px-4 rounded mb-4">
+            <!-- Description Field -->
+            <div class="mb-4">
+                <label for="id_description" class="block text-grey-darker text-sm font-bold mb-2">Description</label>
+                {{ form.description }}
+            </div>
+
+            <!-- Profile Picture Field -->
+
+
+            {% if form.errors %}
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                    <strong class="font-bold">Please correct the following errors:</strong>
                     {% for field in form %}
                         {{ field.errors }}
                     {% endfor %}
-
                     {{ form.non_field_errors }}
                 </div>
             {% endif %}
 
-            <button class="signup-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded, w-full">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline, w-full">
                 Sign Up
             </button>
-
-            <div class="text-center text-sm text-grey-dark mt-4">
-                        By signing up, you agree to the
-                        <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
-                            Terms of Service
-                        </a> and
-                        <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
-                            Privacy Policy
-                        </a>
-                    </div>
-
-            <div class="text-grey-dark mt-6">
-                    Already have an account?
-                    <a class="no-underline border-b border-blue text-blue" href='{% url 'core:login' %}'>
-                        Log in
-                    </a>.
-                </div>
         </form>
+        <div class="mt-4 text-center">
+            Already have an account? <a href="{% url 'core:login' %}" class="no-underline text-blue-500">Log in</a>.
+        </div>
     </div>
 </div>
-
 {% endblock content %}

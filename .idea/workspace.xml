@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f40ab6e-c4d4-4f2b-a235-edbae421a1ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/puddle/conversation.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/puddle/conversation/migrations/0002_thread_post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/puddle/item/migrations/0004_item_thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/puddle/media/item_images/995f6282-43fe-464d-ba3d-2b646a8f7ec3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puddle/conversation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/conversation/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puddle/conversation/templates/conversation/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/conversation/templates/conversation/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puddle/conversation/templates/conversation/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/conversation/templates/conversation/inbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puddle/conversation/templates/conversation/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/conversation/templates/conversation/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puddle/conversation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/conversation/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puddle/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/core/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puddle/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/core/templates/core/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puddle/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puddle/core/templates/core/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/core/templates/core/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puddle/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puddle/item/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/item/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puddle/item/templates/item/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/puddle/item/templates/item/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
       <updated>1684865867153</updated>
       <workItem from="1684865870302" duration="25000" />
       <workItem from="1706729260836" duration="2609000" />
-      <workItem from="1706968961628" duration="1445000" />
+      <workItem from="1706968961628" duration="4571000" />
     </task>
     <servers />
   </component>

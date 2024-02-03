@@ -43,7 +43,7 @@ def new_conversation(request, item_pk):
 
     else:
         users = User.objects.all()
-        return render(request, 'conversation/select_members.html', {'users': users})
+        return render(request, 'conversation/new.html', {'users': users})
 
 
 @login_required
